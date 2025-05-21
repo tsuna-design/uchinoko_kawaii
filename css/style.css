@@ -14,6 +14,65 @@ img {
     padding: 0;
 }
 
+/* ファーストビュー＊CTAボタン */
+.fv-container {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.fv-main {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cta-btn {
+  position: absolute;
+  top: 1260px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+}
+
+/* CTAボタン_アニメーション */
+
+.cta-btn img {
+  animation: pulse 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08); /* ちょっと大きくなる */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 追従ボタン */
+.fixed-btn {
+  position: fixed;
+  bottom: 10px; /* 画面下からの距離 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 600px; /* お好みのサイズに調整 */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fixed-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0); /* 表示位置 */
+}
 
 
 /* フッター */
@@ -50,7 +109,16 @@ img {
 }
 
 
+@media screen and (max-width: 480px) {
+  .cta-btn {
+    top: 720px; /* スマホ用に位置を調整 */
+    width: 350px;
+  }
 
+  .fixed-btn {
+    width: 350px;
+  }
+}
 
 
 

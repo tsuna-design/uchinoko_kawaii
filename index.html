@@ -8,32 +8,42 @@
 </head>
 <body>
     <section id="fv">
-        <div>
-            <img src="./image/1.jpg" alt="1">
+        <div class="fv-container">
+            <img src="./image/1.jpg" alt="1" class="fv-main">
+            <a href="" class="cta-btn">
+                <img src="./image/btn_1.png" alt="今すぐ申し込む">
+            </a>
         </div>
     </section>
-    <div>
-        <img src="./image/2.jpg" alt="2">
-    </div>
-    <div>
-        <img src="./image/3.jpg" alt="3">
-    </div>
-    <div>
-        <img src="./image/4.jpg" alt="4">
-    </div>
-    <div>
-        <img src="./image/5.jpg" alt="5">
-    </div>
-    <div>
-        <img src="./image/6.jpg" alt="6">
-    </div>
-    <div>
-        <img src="./image/7.jpg" alt="7">
-    </div>
-    <div>
-        <img src="./image/8.jpg" alt="8">
-    </div>
+
+    <section id="main">
+        <div>
+            <img src="./image/2.jpg" alt="2">
+        </div>
+        <div>
+            <img src="./image/3.jpg" alt="3">
+        </div>
+        <div>
+            <img src="./image/4.jpg" alt="4">
+        </div>
+        <div>
+            <img src="./image/5.jpg" alt="5">
+        </div>
+        <div>
+            <img src="./image/6.jpg" alt="6">
+        </div>
+        <div>
+            <img src="./image/7.jpg" alt="7">
+        </div>
+        <div>
+            <img src="./image/8.jpg" alt="8">
+        </div>
+    </section>
     
+    <a href="#form" class="fixed-btn" id="scrollBtn">
+        <img src="./image/btn_1.png" alt="今すぐ申し込む">
+    </a>
+
     <footer class="footer">
         <ul class="footer-links">
             <li><a href="tokushoho.html" target="_blank" rel="noopener noreferrer">特定商取引法に関する表記</a></li>
@@ -41,6 +51,18 @@
         </ul>
         <p class="copyright">&copy; うちの子アカウント育成レッスン</p>
     </footer>
+
+<!-- JS -->
+<script>
+  window.addEventListener('scroll', function () {
+    const scrollBtn = document.getElementById('scrollBtn');
+    if (window.scrollY > 1400) { // スクロール量の閾値（お好みで調整）
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+  });
+</script>
 
 </body>
 </html>
